@@ -72,6 +72,12 @@ class _PermissionsScreenState extends State<PermissionsScreen> with SemanticAnno
           backgroundColor: theme.cardColor,
           actions: <Widget>[
             TextButton(
+              child: Text(l10n.button_common_app_settings),
+              onPressed: () {
+                openAppSettings(); // This opens the app settings for iOS and Android
+              },
+            ),
+            TextButton(
               child: Text(l10n.button_common_close),
               onPressed: () => Navigator.of(context).pop(),
             ),

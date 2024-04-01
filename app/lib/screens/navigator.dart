@@ -261,7 +261,7 @@ class _ScreenState extends State<NavigatorScreen> {
                 icon: const Icon(Icons.radar_outlined),
               ),
             ];
-            var visibleLenght = navBarItems.where((item) => item.isVisible).length;
+            var visibleLength = navBarItems.where((item) => item.isVisible).length;
             var visibleIndex = 0;
             return Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -270,7 +270,7 @@ class _ScreenState extends State<NavigatorScreen> {
                 var item = navBarItems[index];
                 visibleIndex += item.isVisible ? 1 : 0;
                 var label =
-                    "${item.talkback}, ${m10n.tabLabel(tabIndex: visibleIndex, tabCount: visibleLenght)}";
+                    "${item.talkback}, ${m10n.tabLabel(tabIndex: visibleIndex, tabCount: visibleLength)}";
                 label = isSelected ? "$label, ${l10n.label_common_selected} " : label;
                 return Visibility(
                   visible: item.isVisible,
@@ -280,7 +280,24 @@ class _ScreenState extends State<NavigatorScreen> {
                       child: Semantics(
                         label: label,
                         child: Container(
-                          color: isSelected ? theme.cardColor : Colors.transparent,
+                          decoration: isSelected
+                              ? BoxDecoration(
+                                  color: theme.cardColor,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: theme.primaryColor.withOpacity(
+                                          0.5), // Adjust the color and opacity to achieve the desired glow effect
+                                      spreadRadius:
+                                          2, // Adjust the spread radius to control the extent of the glow
+                                      blurRadius:
+                                          8, // Adjust the blur radius to make the glow softer or sharper
+                                      offset: Offset(0, 0), // changes position of shadow
+                                    ),
+                                  ],
+                                )
+                              : BoxDecoration(
+                                  color: Colors.transparent,
+                                ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [

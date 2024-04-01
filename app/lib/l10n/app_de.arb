@@ -307,13 +307,13 @@
   "screen_header_wikipedia_t": "Wikipedia Artikel mit Bezug zu ihrem Standort",
   "screen_header_wikipedia": "Wikipedia Artikel",
 
-  "label_permissions_explain": "# Willkommen bei Candle!\n\nAls Navigations-App für Blinde und Sehbehinderte benötigen wir Zugriff auf Ihren Standort für präzise Navigation und Spracheingabe für eine bedienungsfreie Nutzung. Diese Berechtigungen sind für unsere Kernfunktionalität unerlässlich. Vielen Dank, dass Sie diese Berechtigungen aktivieren, um das volle Potenzial Ihrer Candle-Erfahrung zu nutzen.",
-  "button_permissions_request": "Berechtigungen Zulassen",
+  "label_permissions_explain": "# Willkommen bei Candle!\n\nFür die Navigation benötigt Candle den Zugriff auf Ihren Standort und die Spracheingabe. Diese sind für die Funktionalität der App entscheidend.\n\nWenn Sie Candle als Navigationshilfe nutzen möchten, sind diese Berechtigungen nötig. Ihre Entscheidung steht an erster Stelle—ohne Berechtigungen ist die Nutzung nicht möglich.\n\nDanke, dass Sie über die vollständige Aktivierung Ihrer Candle-Erfahrung nachdenken.",
+  "button_permissions_request": "Weiter..",
   
   "label_permissions_allwaysgps_explain": "# Stellen Sie die Standortberechtigung auf **'Immer zulassen'** ein, um wichtige App-Funktionen wie die **Routenaufzeichnung** zu ermöglichen. \n\nDiese Berechtigung ist entscheidend für die **Standortverfolgung im Hintergrund** und ermöglicht die **Routenaufzeichnung, auch wenn die App geschlossen ist oder nicht verwendet wird**, was besonders für sehbehinderte Benutzer nützlich ist. Ihre Daten bleiben ausschließlich auf Ihrem **Gerät privat** und werden nur für **App-Funktionen verwendet**. Die Erteilung dieser Berechtigung ist optional; wird sie nicht erteilt, wird die Aufzeichnungsfunktion im Hintergrund deaktiviert.",
 
   "permissions_denied_title": "Berechtigungen Verweigert",
-  "permissions_denied_description": "Um alle Funktionen unserer App nutzen zu können, benötigt sie Zugriff auf Ihren Standort, Ihr Mikrofon und Ihre Kamera. Ohne diese Berechtigungen funktionieren bestimmte Funktionen möglicherweise nicht richtig. Bitte aktivieren Sie diese Berechtigungen in Ihren Geräteeinstellungen, um fortzufahren.",
+  "permissions_denied_description": "Candle benötigt für die vollständige Navigationsfunktion Zugriff auf Standort und Mikrofon. Ohne diese Zugriffe ist eine Navigation nicht möglich. Ihre Wahl und Privatsphäre stehen bei uns hoch im Kurs. Sie können die Berechtigungen in den Einstellungen Ihres Geräts jederzeit anpassen, falls Sie sich dafür entscheiden.",
 
   "accessible_text_input_t": "Texteingabefeld.",
   "accessible_text_suffix_t": "Rechts befindet sich eine Schaltfläche für die Spracheingabeunterstützung",

@@ -763,7 +763,7 @@
   },
 
 
-  "label_permissions_explain": "# Welcome to Candle!\n\nAs a navigation app for the blind and visually impaired, we require location access for precise navigation and voice input for hands-free operation. These permissions are essential for our core functionality. Thank you for enabling these permissions to fully utilize your Candle experience.",
+  "label_permissions_explain": "# Welcome to Candle!\n\nCandle needs location access for navigation and voice input for hands-free use. These are vital for the app’s functionality.\n\nChoosing Candle for navigation means enabling these permissions. Your choice is respected—if you decline, using the app won’t be possible.\n\nThank you for considering to fully enable your Candle experience.",
   "@label_permissions_explain": {
     "description": "Infotext for the permissions request"
   },
@@ -773,13 +773,13 @@
     "description": "Infotext for the permissions gps_allways request"
   },
 
-  "button_permissions_request": "Grant Permissions",
+  "button_permissions_request": "Continue..",
   "@button_permissions_request": {
     "description": "Button text for the permissions request"
   },
 
   "permissions_denied_title": "Permissions Denied",
-  "permissions_denied_description": "To fully utilize the features of our app, it needs access to your location, microphone, and camera. Without these permissions, certain features may not work properly. Please enable these permissions in your device settings to continue.",
+  "permissions_denied_description": "To function as a navigation aid, access to your location and microphone is essential. Without these, the app cannot provide navigation assistance. We respect your choices and privacy. Should you decide to grant these permissions, please adjust them in your app settings.",
 
   "button_contact_me": "Contact Me",
   "@button_contact_me": {

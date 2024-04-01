@@ -46,7 +46,7 @@ class _ScreenState extends State<HomeScreen> {
     return ValueListenableBuilder(
       valueListenable: AppFeatures.featuresUpdateNotifier,
       builder: (context, _, __) {
-        List<Widget?> buttons = [
+        List<Widget> buttons = [
           _buildTileButtonCompass(l10n, context),
           _buildTileButtonLocation(l10n, context),
           _buildTileButtonRecorder(l10n, context),
@@ -54,9 +54,7 @@ class _ScreenState extends State<HomeScreen> {
           _buildTileButtonShare(l10n, context),
           _buildTileButtonWikipedia(l10n, context),
           _buildTileButtonAbout(l10n, context),
-        ];
-        List<Widget> filteredButtons =
-            buttons.where((widget) => widget != null).cast<Widget>().toList();
+        ].whereType<Widget>().toList();
 
         return Scaffold(
             appBar: CandleAppBar(
@@ -66,21 +64,22 @@ class _ScreenState extends State<HomeScreen> {
               settingsEnabled: true,
             ),
             body: BackgroundWidget(
-              child: Center(
+              child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const LocationAddressTile(),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(18.0),
-                        child: GridView.count(
-                            crossAxisCount: 2, // Two columns
-                            childAspectRatio: 1.0, // Aspect ratio of 1.0 (width == height)
-                            crossAxisSpacing: 10, // Spacing in between items horizontally
-                            mainAxisSpacing: 10, // Spacing in between items vertically
-                            children: filteredButtons),
-                      ),
+                    Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: GridView.count(
+                          physics:
+                              const NeverScrollableScrollPhysics(), // Essential for nested GridView in SingleChildScrollView
+                          shrinkWrap: true,
+                          crossAxisCount: 2, // Two columns
+                          childAspectRatio: 1.0, // Aspect ratio of 1.0 (width == height)
+                          crossAxisSpacing: 10, // Spacing in between items horizontally
+                          mainAxisSpacing: 10, // Spacing in between items vertically
+                          children: buttons),
                     )
                   ],
                 ),
