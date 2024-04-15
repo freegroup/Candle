@@ -714,7 +714,11 @@
   },
 
 
-  "screen_header_address_search_t": "Enter part of an address to find matches. Select the best one.",
+  "input_address_search_t": "Enter part of an address to find matches. Select the best one.",
+  "@input_address_search_t": {
+    "description": "Talkback for the address search input field"
+  },
+  "screen_header_address_search_t": "Search for Address",
   "@screen_header_address_search_t": {
     "description": "Talkback for the address search AppBar"
   },

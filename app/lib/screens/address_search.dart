@@ -10,8 +10,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:provider/provider.dart';
 
-//Model classes that will be used for auto complete
-
 class AddressSearchScreen extends StatefulWidget {
   final StreamSink<LocationAddress?> sink;
   final String? addressFragment;
@@ -85,6 +83,7 @@ class _ScreenState extends State<AddressSearchScreen> with SemanticAnnouncer {
           AccessibleTextInput(
             controller: _controller,
             autofocus: true,
+            talkbackInput: l10n.input_address_search_t,
           ),
           const SizedBox(height: 18),
           Expanded(

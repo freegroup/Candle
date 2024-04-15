@@ -292,7 +292,8 @@
   "buttonbar_radar": "Orte Radar",
 
 
-  "screen_header_address_search_t": "Geben Sie Teile einer Adresse ein, um passende Adressen zu finden. Wählen Sie die beste aus.",
+  "input_address_search_t": "Geben Sie Teile einer Adresse ein, um passende Adressen zu finden. Wählen Sie die beste aus.",
+  "screen_header_address_search_t": "Adresse Suchen",
   "screen_header_address_search": "Adresse Suchen",
   "address_search_list": "Vorgeschlagene Adressen",
 
