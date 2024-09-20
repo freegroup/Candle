@@ -782,6 +782,9 @@
     "description": "Button text for the permissions request"
   },
 
+  "button_suggest_to_friends": "Share App",
+  "button_suggest_to_friends_t": "Share the app with friends",
+
   "permissions_denied_title": "Permissions Denied",
   "permissions_denied_description": "To function as a navigation aid, access to your location and microphone is essential. Without these, the app cannot provide navigation assistance. We respect your choices and privacy. Should you decide to grant these permissions, please adjust them in your app settings.",
 
@@ -1266,6 +1269,17 @@
 
   "error_no_email_launch": "Could not launch the email client",
   "@error_no_email_launch": {
+    "description": "Error message if we are unable to lanch an email client"
+  },
+
+
+  "email_share_subject": "App Recommendation: Candle",
+  "@email_share_subject": {
+    "description": "eMail subject if a user contact us via eMail"
+  },
+
+  "email_share_body": "I would like to recommend the 'Candle' app to you. Great app for GPS navigation.\n\nHere are the links to the app:\n\n",
+  "@email_share_body": {
     "description": "Error message if we are unable to lanch an email client"
   },
 

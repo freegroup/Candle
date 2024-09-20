@@ -129,9 +129,11 @@
   "button_address_reload": "Aktualisieren",
   "button_address_reload_t": "Aktualisieren der Addresse",
 
+  "button_suggest_to_friends": "App teilen",
+  "button_suggest_to_friends_t": "App mit Freunden teilen",
+
   "button_navigate_poi_t": "Starte Weg Führung zum Ziel.",
   "button_navigate_poi": "Navigation starten",
-
 
   "featureflag_recorder_t": "Aufzeichnen von Routen aktivieren",
   "featureflag_recorder": "Strecke Aufzeichnen",
@@ -345,6 +347,8 @@
 
   "email_contact_subject": "Candle Benutzer Anfrage",
   "error_no_email_launch": "E-Mail Programm kann nicht gestartet werden",
+  "email_share_subject": "App Empfehlung: Candle",
+  "email_share_body": "Ich möchte dir die App 'Candle' empfehlen. Nette App zur GPS Navigation.\n\nHier sind die Links zur App:\n\n",
 
   "poi_category_crossing": "Fussgängerüberweg",
   "poi_category_bars": "Bars",

@@ -65,7 +65,7 @@ class _ScreenState extends State<NavigatorScreen> {
 
   void _initSharingIntent() {
     // Listen to media sharing coming from outside the app while the app is in the memory.
-    _intentSub = ReceiveSharingIntent.getMediaStream().listen((value) {
+    _intentSub = ReceiveSharingIntent.instance.getMediaStream().listen((value) {
       _handleSharedFile(value);
       setState(() {});
     }, onError: (err) {
@@ -73,11 +73,11 @@ class _ScreenState extends State<NavigatorScreen> {
     });
 
     // Get the media sharing coming from outside the app while the app is closed.
-    ReceiveSharingIntent.getInitialMedia().then((value) {
+    ReceiveSharingIntent.instance.getInitialMedia().then((value) {
       setState(() {
         _handleSharedFile(value);
         // Tell the library that we are done processing the intent.
-        ReceiveSharingIntent.reset();
+        ReceiveSharingIntent.instance.reset();
       });
     });
   }
@@ -291,11 +291,11 @@ class _ScreenState extends State<NavigatorScreen> {
                                           2, // Adjust the spread radius to control the extent of the glow
                                       blurRadius:
                                           8, // Adjust the blur radius to make the glow softer or sharper
-                                      offset: Offset(0, 0), // changes position of shadow
+                                      offset: const Offset(0, 0), // changes position of shadow
                                     ),
                                   ],
                                 )
-                              : BoxDecoration(
+                              : const BoxDecoration(
                                   color: Colors.transparent,
                                 ),
                           child: Column(

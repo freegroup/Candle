@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:candle/models/latlng_provider.dart';
 import 'package:flutter/widgets.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart' as google;
 
 enum NavigationPointType {
   syntetic,
@@ -38,10 +37,6 @@ class NavigationPoint implements LatLngProvider {
   @override
   LatLng latlng() {
     return coordinate;
-  }
-
-  google.LatLng glatlng() {
-    return google.LatLng(coordinate.latitude, coordinate.longitude);
   }
 
   Map<String, dynamic> toMap() {

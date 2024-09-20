@@ -1,7 +1,10 @@
 name: candle
 description: "Accessible Navigation App"
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 1.4.4+40
+version: 1.4.4+41
+
+appStoreLink: 'https://apps.apple.com/de/app/candle-navigation-app/id6478289375'
+playStoreLink: 'https://play.google.com/store/apps/details?id=de.freegroup.candle'
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
@@ -23,8 +26,8 @@ dependencies:
   flutter_slidable: ^3.0.1
   flutter_svg: ^2.0.9
   get: ^4.6.6
+  yaml: ^3.1.0
   google_geocoding_api: ^1.4.1
-  google_maps_flutter: ^2.5.0
   http: ^1.1.2
   image: ^3.2.0
   intl: any

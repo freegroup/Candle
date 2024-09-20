@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:candle/app.dart';
-import 'package:candle/auth/secrets.dart';
+
 import 'package:candle/models/navigation_point.dart';
 import 'package:candle/models/route.dart' as model;
 import 'package:candle/services/database.dart';
@@ -15,7 +15,6 @@ import 'package:candle/utils/featureflag.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
-import 'package:flutter_background_service_android/flutter_background_service_android.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -110,10 +109,12 @@ void onStart(ServiceInstance service) async {
       if (service is AndroidServiceInstance) {
         bool isForeground = AppFeatures.allwaysAccessGps.isEnabled;
         if (isForeground) {
-          print('Setting as Foreground due to allwaysOnGps flag => continue running on app close');
+          print(
+              'Setting as Foreground due to allwaysOnGps flag => continue running on app close');
           service.setAsForegroundService();
         } else {
-          print('Running as Background due to allwaysOnGps flag => terminate on app close');
+          print(
+              'Running as Background due to allwaysOnGps flag => terminate on app close');
           service.setAsBackgroundService();
         }
       }
@@ -124,7 +125,8 @@ void onStart(ServiceInstance service) async {
 
       _currentRouteName = event?['routeName'] as String;
 
-      var route = await DatabaseService.instance.getRouteByName(_currentRouteName);
+      var route =
+          await DatabaseService.instance.getRouteByName(_currentRouteName);
       if (route == null) {
         route = model.Route(name: _currentRouteName, points: []);
         await DatabaseService.instance.addRoute(route);
@@ -164,7 +166,8 @@ void onStart(ServiceInstance service) async {
 // Extracted function
 Future<void> updateRecording(ServiceInstance service) async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
-  bool backgroundServicePaused = prefs.getBool('backgroundServicePaused') ?? false;
+  bool backgroundServicePaused =
+      prefs.getBool('backgroundServicePaused') ?? false;
   if (backgroundServicePaused || _currentRouteName == kDefaultRouteToIgnore) {
     print("paused or ignored due to missing correct routeName");
     return;
@@ -172,7 +175,8 @@ Future<void> updateRecording(ServiceInstance service) async {
 
   LatLng? loc = await LocationService.instance.location;
   if (loc != null) {
-    var route = await DatabaseService.instance.getRouteByName(_currentRouteName);
+    var route =
+        await DatabaseService.instance.getRouteByName(_currentRouteName);
     if (route != null) {
       route.points.add(NavigationPoint(coordinate: loc, annotation: ""));
       await DatabaseService.instance.updateRoute(route);
